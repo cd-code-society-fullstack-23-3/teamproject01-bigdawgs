@@ -110,4 +110,12 @@ public class UserMgrTest {
             userMgr.requestEncode("Earl", "Sweatshirt", "Hello, world!");
         });
     }
+
+    @Test
+    public void requestDecodeTestSuccess() throws Exception{
+        UserMgr userMgr = new UserMgr();
+        String expected = "Hello, world!";
+        String actual = userMgr.requestDecode("Default", "User", "Khoor, zruog!");
+        assertEquals(expected, actual);
+    }
 }

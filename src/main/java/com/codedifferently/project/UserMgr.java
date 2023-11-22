@@ -69,6 +69,10 @@ public class UserMgr {
         return search(firstName, lastName).encodeMessage(message);
     }
 
+    public String requestDecode(String firstName, String lastName, String message) throws Exception{
+        return search(firstName, lastName).decodeMessage(message);
+    }
+
     private Boolean userExist(String firstName, String lastName){
         for (User u:users) {
             String currentFirstName = u.getFirstName();
